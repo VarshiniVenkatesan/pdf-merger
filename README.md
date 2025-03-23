@@ -18,8 +18,8 @@ This is a **Flask-based web application** that allows users to upload multiple P
 
 ## 🚀 Live Demo
 
-> 🌐 **[Deployed App](https://your-app-url.com/)**  
-(*Replace with actual Render/Heroku URL after deployment*)
+> 🌐 **[Deployed App](https://pdf-merger-0nrr.onrender.com)**  
+
 
 ---
 
@@ -27,8 +27,8 @@ This is a **Flask-based web application** that allows users to upload multiple P
 
 ### 1️⃣ Clone the repository
 ```bash
-git clone https://github.com/your-username/pdf-merger-flask.git
-cd pdf-merger-flask
+git clone https://github.com/VarshiniVenkatesan/pdf-merger.git
+cd pdf-merger
 ```
 
 ### 2️⃣ Install dependencies
@@ -64,31 +64,11 @@ The app will be available at **`http://127.0.0.1:5000/`** in your browser.
 ## 🖼️ Screenshots
 
 🔹 **Drag & Drop File Upload**  
-![Upload Section](https://via.placeholder.com/600x300.png?text=Drag+%26+Drop+Upload)
+![Upload Section](https://github.com/user-attachments/assets/617562d3-3453-4e14-b24b-509230e7f878)
 
 🔹 **Merged PDF Download**  
-![Download](https://via.placeholder.com/600x300.png?text=Download+Merged+PDF)
+![Download](https://github.com/user-attachments/assets/3fda985c-8395-4aac-b881-6cf7184208b0)
 
----
-
-## 🌍 Deployment
-
-You can deploy this app on platforms like **Render, Heroku, or Vercel**. 
-
-### 📌 Steps to Deploy on Render:
-1. Create a new **Render Web Service**.
-2. Connect your GitHub repository.
-3. Set the **Build Command** as:  
-   ```
-   pip install -r requirements.txt
-   ```
-4. Set the **Start Command** as:  
-   ```
-   gunicorn app:app
-   ```
-5. Click **Deploy** and wait for it to go live! 🎉
-
----
 
 ## 🤝 Contribution
 
