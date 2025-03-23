@@ -1,0 +1,82 @@
+<!-- templates/index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PDF Merger Pro</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>PDF Merger</h1>
+            <p>Merge your PDF files easily and quickly</p>
+        </header>
+
+        <main>
+            <div class="upload-section">
+                <div class="file-drop-area" id="dropArea">
+                    <span class="drop-message">
+                        <i class="fas fa-file-pdf"></i>
+                        <span>Drag & drop PDF files here or click to browse</span>
+                    </span>
+                    <input type="file" class="file-input" id="fileInput" accept=".pdf" multiple>
+                </div>
+            </div>
+
+            <div class="file-list-container">
+                <div class="file-list-header">
+                    <span id="fileCounter">Files selected: 0</span>
+                </div>
+                <div class="file-list" id="fileList">
+                    <!-- Files will be listed here dynamically -->
+                </div>
+            </div>
+
+            <div class="buttons">
+                <button id="addFilesBtn" class="btn primary-btn">
+                    <i class="fas fa-plus"></i> Add PDF Files
+                </button>
+                <button id="clearAllBtn" class="btn">
+                    <i class="fas fa-trash"></i> Clear All
+                </button>
+                <button id="mergeBtn" class="btn merge-btn">
+                    <i class="fas fa-object-group"></i> Merge PDFs
+                </button>
+            </div>
+        </main>
+
+        <div class="status-bar" id="statusBar">Ready to merge PDFs</div>
+
+        <!-- Modal for showing the merge result -->
+        <div id="resultModal" class="modal">
+            <div class="modal-content">
+                <span class="close-btn">&times;</span>
+                <h2>Success!</h2>
+                <p>Your PDFs have been merged successfully.</p>
+                <div class="filename-container">
+                    <label for="filenameInput">Enter a filename for your merged PDF:</label>
+                    <input type="text" id="filenameInput" class="filename-input" placeholder="merged.pdf">
+                </div>
+                <button id="downloadBtn" class="btn primary-btn">
+                    <i class="fas fa-download"></i> Download Merged PDF
+                </button>
+            </div>
+        </div>
+
+        <!-- Loading overlay -->
+        <div id="loadingOverlay" class="loading-overlay">
+            <div class="spinner"></div>
+            <p></p>
+        </div>
+    </div>
+    <div class="creator-section">
+        Created by <strong>Varshini SV</strong>
+        <a href="https://www.linkedin.com/in/varshinisv24/" target="_blank" class="linkedin-outline">in</a>
+    </div>
+    
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
